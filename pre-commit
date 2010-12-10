@@ -1,12 +1,11 @@
 #! /bin/sh
 
 if [ -n "${GIT_DIR}" ]; then
-  hooksdir="./${GIT_DIR}/hooks/"
+  HOOKS_DIR="./${GIT_DIR}/hooks/"
 else
-  hooksdir="./"
+  HOOKS_DIR="./"
 fi
-
-. "${hooksdir}common"
+. "${HOOKS_DIR}common"
 
 if isBranch "master" || isBranch "develop"; then
   echo "WARNING: Could not commit to `getBranch`."
