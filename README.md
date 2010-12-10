@@ -6,6 +6,6 @@ It is only that refuse commits to the master and develop branch.
 
 ## Install your repository ##
 
-It is only type this command.
+It is only type this command on your project root dir.
 
   wget --no-check-certificate -q -O - https://github.com/tfmagician/sgb_hooks/raw/master/install.sh | sh
