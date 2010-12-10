@@ -1,0 +1,16 @@
+#! /bin/sh
+
+if [ -n "${GIT_DIR}" ]; then
+  hooksdir="./${GIT_DIR}/hooks/"
+else
+  hooksdir="./"
+fi
+
+. "${hooksdir}common"
+
+if isBranch "master" || isBranch "develop"; then
+  echo "WARNING: Could not commit to `getBranch`."
+  exit 1
+fi
+
+exit 0

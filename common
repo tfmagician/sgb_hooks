@@ -1,0 +1,14 @@
+#!/bin/sh
+
+getBranch() {
+  branch="$(git symbolic-ref HEAD 2>/dev/null)" ||
+         "$(git describe --contains --all HEAD)"
+  echo ${branch##refs/heads/}
+}
+
+isBranch() {
+  if [ "$(getBranch)" = $1 ]; then
+    return 0
+  fi
+  return 1
+}
