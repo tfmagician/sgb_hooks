@@ -7,4 +7,4 @@ It is only that refuse commits to the master and develop branch.
 
 It is only type this command.
 
-  wget --no-check-certificate -O -q https://github.com/tfmagician/sgb_hooks/blob/master/install.sh | sh
+  wget --no-check-certificate -q -O - https://github.com/tfmagician/sgb_hooks/raw/master/install.sh | sh
